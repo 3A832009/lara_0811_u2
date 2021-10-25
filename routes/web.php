@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,5 +26,5 @@ Route::group(['prefix'=>'admin'],function (){
     });
 });
 
-
+Route::get('home',[\App\Http\Controllers\HomeController::class,'index'])->name('home.index');
 
